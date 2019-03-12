@@ -17,10 +17,10 @@ u.r1c0 = (Complex) {.real=0, .imag=0};
 u.r1c1 = (Complex) {.real=1, .imag=0};
 unitary(qubits, 1, u);
   
-qreal prob;
 controlledUnitary(qubits, 0, 1, u);
 hadamard(qubits, 0);
 
+qreal prob;
 prob = calcProbOfOutcome(qubits, 0, 0);
 printf("Probability of qubit 0 being in state 0: %f\n", prob);
 
